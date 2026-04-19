@@ -3,26 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Projem</title>
+    <title>TurkMedia Tarzı Site</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">WebSite</div>
-        <ul id="nav-links">
-            <li><a href="#">Ana Sayfa</a></li>
-            <li><a href="#">Hakkımda</a></li>
-            <li><a href="#">İletişim</a></li>
-        </ul>
-        <button id="menu-toggle" class="menu-btn">☰</button>
+        <div class="container">
+            <div class="logo">TURKMEDIA</div>
+            <ul class="nav-links">
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#">Haberler</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <header class="hero">
-        <h1 id="main-title">Web Siteme Hoş Geldin!</h1>
-        <p>GitHub Pages üzerinde hazırladığım web sitesi örneği.</p>
-        <button id="color-btn" class="cta-button">Arka Plan Rengini Değiştir</button>
+    <header class="main-banner">
+        <div class="banner-content">
+            <h1>TurkMedia'ya Hoş Geldiniz</h1>
+            <p>En güncel içerikler ve medya haberleri burada.</p>
+        </div>
     </header>
+
+    <section class="content-grid container">
+        <div class="card">
+            <div class="card-image"></div>
+            <h3>Haber Başlığı 1</h3>
+            <p>Kısa bir açıklama metni buraya gelecek.</p>
+        </div>
+        <div class="card">
+            <div class="card-image"></div>
+            <h3>Haber Başlığı 2</h3>
+            <p>Kısa bir açıklama metni buraya gelecek.</p>
+        </div>
+        <div class="card">
+            <div class="card-image"></div>
+            <h3>Haber Başlığı 3</h3>
+            <p>Kısa bir açıklama metni buraya gelecek.</p>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
