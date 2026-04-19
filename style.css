@@ -1,48 +1,62 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
-/* Üstteki siyah alan */
-.black-header {
-    background-color: #000000;
-    color: #ffffff;
+.siyah-banner {
+    background-color: #000;
+    color: #fff;
     text-align: center;
-    padding: 80px 0;
+    padding: 60px 20px;
 }
 
-.black-header h1 {
-    font-size: 48px;
+.siyah-banner h1 {
     margin: 0;
+    font-size: 3rem;
+    letter-spacing: 2px;
 }
 
-.container {
-    max-width: 1000px;
+.link-container {
+    max-width: 600px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* Mavi butonların dizilimi */
-.link-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+.link-section {
+    margin-bottom: 30px;
 }
 
-.box-link {
-    background-color: #1a73e8; /* Sitedeki mavi */
-    color: #ffffff;
+.link-section h2 {
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+a {
+    color: #007bff;
     text-decoration: none;
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 20px;
     font-weight: bold;
-    border-radius: 2px;
-    display: block;
 }
 
-.box-link:hover {
-    background-color: #1557b0;
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+    .siyah-banner h1 { font-size: 2rem; }
 }
