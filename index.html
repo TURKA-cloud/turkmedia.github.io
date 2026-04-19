@@ -1,27 +1,48 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TurkMedia23</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #ffffff;
+}
 
-    <header class="black-header">
-        <h1>TurkMedia23</h1>
-    </header>
+/* Üstteki siyah alan */
+.black-header {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 0;
+}
 
-    <div class="container">
-        <div class="link-grid">
-            <a href="https://sites.google.com/view/turkmedia23/haberler" class="box-link">HABERLER</a>
-            <a href="https://sites.google.com/view/turkmedia23/spor" class="box-link">SPOR</a>
-            <a href="https://sites.google.com/view/turkmedia23/e-spor" class="box-link">E-SPOR</a>
-            <a href="https://sites.google.com/view/turkmedia23/teknoloji" class="box-link">TEKNOLOJİ</a>
-            <a href="https://sites.google.com/view/turkmedia23/oyun" class="box-link">OYUN</a>
-            <a href="https://sites.google.com/view/turkmedia23/dizifilm" class="box-link">DİZİ/FİLM</a>
-        </div>
-    </div>
+.black-header h1 {
+    font-size: 48px;
+    margin: 0;
+}
 
-</body>
-</html>
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Mavi butonların dizilimi */
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.box-link {
+    background-color: #1a73e8; /* Sitedeki mavi */
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 2px;
+    display: block;
+}
+
+.box-link:hover {
+    background-color: #1557b0;
+}
