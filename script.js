@@ -1,22 +1,31 @@
-// HTML elemanlarını seçiyoruz
-const colorBtn = document.getElementById('color-btn');
-const mainTitle = document.getElementById('main-title');
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide-item');
+const slider = document.getElementById('webSlider');
 
-// Butona tıklanınca ne olacağını tanımlıyoruz
-colorBtn.addEventListener('click', function() {
-    // Rastgele bir renk üretelim
-    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-    
-    // Sayfanın arka planını değiştir
-    document.body.style.backgroundColor = randomColor;
-    
-    // Başlık metnini değiştir
-    mainTitle.textContent = "Renk Değişti!";
-    mainTitle.style.color = "#fff";
+function updateSlider() {
+  // Aktif sınıfını güncelle
+  slides.forEach((slide, index) => {
+    slide.classList.toggle('active', index === currentIndex);
+  });
+
+  // Kaydırma miktarını hesapla (her öğe 230px genişlikte varsayılır)
+  const offset = -(currentIndex * 230); 
+  slider.style.transform = `translateX(${offset}px)`;
+}
+
+// Klavye Tuşlarını Dinle
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight') {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+  } else if (e.key === 'ArrowLeft') {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlider();
+  } else if (e.key === 'Enter') {
+    // Enter'a basınca aktif siteye git
+    window.open(slides[currentIndex].querySelector('a').href, '_blank');
+  }
 });
 
-// Menü butonu için basit bir uyarı (Interaction örneği)
-const menuBtn = document.getElementById('menu-toggle');
-menuBtn.addEventListener('click', () => {
-    alert("Mobil menü henüz yapım aşamasında!");
-});
+// Sayfa açıldığında ilk durumu yükle
+updateSlider();
